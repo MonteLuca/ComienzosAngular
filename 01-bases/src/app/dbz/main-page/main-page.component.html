@@ -1,0 +1,30 @@
+<h1> Dragon Ball Z </h1>
+
+<hr>
+
+<div class="row">
+
+    <div class="col">
+        <app-personajes></app-personajes>
+        <!-- <h3>Personajes</h3>
+        <hr>
+        <ul>
+            <li *ngFor="let personaje of personajes;">
+                {{ personaje.nombre }} - {{ personaje.poder | number }}
+            </li>
+        </ul> -->
+    </div>
+    
+    <!-- En la linea 8 el [personajes] hace referencia al Input de personajes.component,
+    lo que sigue es el valor que tenemos nosotros en el main page-->
+
+    <!-- El | number es un pipe, despues de personaje.poder significa que
+    va a mostrar el numero como si fuera un decimal, por ejemplo sin pipe seria
+    15000, con pipe se veria asi 15,000 -->
+
+    <div class="col">
+        <app-agregar 
+            [nuevoInput]="nuevo"
+        ></app-agregar>
+    </div>
+</div>

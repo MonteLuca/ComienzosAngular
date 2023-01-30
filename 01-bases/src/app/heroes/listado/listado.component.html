@@ -1,0 +1,27 @@
+<!-- despues de que evalua la condicion, despues del ;, se elije la condicion
+del else que se guarda en una variable local -->
+<div *ngIf="heroeEliminado; else noBorrado">
+    <h3>Héroe borrado: <small>{{ heroeEliminado }}</small></h3>
+</div>
+<!-- #noBorrado es una referencia local, nos damos cuenta cuando una es local por el simbolo #, si cumple la condicion sale una cosa
+si no sale la otra-->
+<ng-template #noBorrado>
+    <!-- <ng-template> no tiene como tal una contraparte en HTML, es una funcion de angular que dice que se va a mostrar lo que este dentro si se cumple la condicion, en este caso el #noBorrado-->
+    <h3>No ha borrado nada</h3>
+</ng-template>
+
+
+<button (click)="borrarHeroe()">Borrar Heroe</button>
+
+<p>Listado de Héroes</p>
+
+<ul>
+    <li *ngFor="let heroe of heroes; let i = index"> 
+    <!-- *ngFor es igual que un bucle For la variable 
+    que va a recorre el array es heroe, 
+    heroes pertenece al nombre del array,
+    se puede seguir colocando codigo seperando con un ; -->
+        {{i + 1}} - {{ heroe }}
+    </li>
+</ul>
+

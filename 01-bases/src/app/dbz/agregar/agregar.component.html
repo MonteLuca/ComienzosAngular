@@ -1,0 +1,26 @@
+<h3>Agregar</h3>
+<hr />
+<form (ngSubmit)="agregar()">
+  <!-- ngSubmit es un evento del FormsModule, el cual hace el submit pero la pagina no se recarga-->
+  <input
+    type="text"
+    placeholder=" Nombre"
+    name="nombre"
+    [(ngModel)]="nuevo.nombre"
+  />
+  <!-- El parentesis en el ngModel significa que va a escuchar como tambien emiitir eventos (Two Way Data Binding)
+  y las llaves [] para decirle que escuche a una propiedad del codigo
+  <input type="text" placeholder=" Nombre"
+  [value]="nuevo.nombre"
+  (input)="cambiarNombre( $event )">
+  value entre [] significa que espera una propiedad del componente, () sirve para escuchar o emitir eventos-->
+  <input
+    type="number"
+    placeholder="Poder"
+    name="poder"
+    [(ngModel)]="nuevo.poder"
+  />
+
+  <button type="submit">Agregar</button>
+  
+</form>
