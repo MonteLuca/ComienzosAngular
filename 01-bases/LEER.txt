@@ -1,0 +1,2 @@
+Para desplegar la carpeta dist se necesita el siguiente comando 
+ng build --configuration production.
