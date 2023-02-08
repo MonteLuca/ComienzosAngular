@@ -8,8 +8,12 @@
     <hr class="text-light">
 
     <div class="list-group list-reset"> <!-- list-group nos permite crear una lista, list-reset para que empieze sin nada -->
-      <a href="#" class="list-group-item list-group-item-action"> 
-      Dashboard 
+      <a 
+      *ngFor="let item of historial" 
+      href="#" 
+      class="list-group-item list-group-item-action"
+      (click)="buscar( item )"> 
+      {{item | titlecase }} <!-- El pipe titlecase pone Mayusculas al principio de cada palabra -->
       </a> <!-- list-group-item es para que se cree un item, y list-group-item-action para que se le pueda hacer click -->
     </div>
     
