@@ -17,7 +17,7 @@ export class BusquedaComponent {
 
     const valor = this.txtBuscar.nativeElement.value;
 
-    if (valor.trim().length === 0) {
+    if (valor.trim().length === 0) { //Esto se encarga de no retornar nada si el input de busqueda esta vacio
       return;
     } 
   

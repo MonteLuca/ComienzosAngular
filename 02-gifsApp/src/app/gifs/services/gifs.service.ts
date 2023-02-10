@@ -8,9 +8,9 @@ import { Gif, SearchGIFResponse } from '../interface/gifs.interfaces';
 
 export class GifsService {
 
-  private apiKey: string = 'NkdQ6fpAGYu9lgbCpDtVwELjaMdoL6cP';
+  private apiKey: string = 'NkdQ6fpAGYu9lgbCpDtVwELjaMdoL6cP'; //Esta es la ApiKey que nos proporciona Gifty
 
-  private servicioURL: string = 'https://api.giphy.com/v1/gifs';
+  private servicioURL: string = 'https://api.giphy.com/v1/gifs';  //Esta es la URL de Gifty
 
   private _historial : string[] = []; //Esto se encarga de guardar las busquedas
 
@@ -34,10 +34,11 @@ export class GifsService {
 
   buscarGifs(query:string) {
 
-    query = query.trim().toLocaleLowerCase();
+    query = query.trim().toLocaleLowerCase(); //.trim() quita los espacios en blanco, y toLocaleLowerCase(), pasa todo a minuscula
     
-    if (!this._historial.includes(query)){
+    if (!this._historial.includes(query)){ //Este if se encarga de no guardar en el historial busquedas repetidas
 
+      //Se encarga que el Sidebar solo almacene las ultimas 10 busquedas
       this._historial.unshift(query); //unshift se encarga de agregar elementos al inicio del Array
       this._historial = this._historial.splice(0,10);
 
