@@ -5,6 +5,7 @@ import { GifsService } from 'src/app/gifs/services/gifs.service';
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html'
 })
+
 export class SidebarComponent {
 
   get historial() {

@@ -1,3 +1,5 @@
+//Esto provinene de la pagina app.quicktype.io
+
 // To parse this data:
 //
 //   import { Convert, SearchGIFResponse } from "./file";
