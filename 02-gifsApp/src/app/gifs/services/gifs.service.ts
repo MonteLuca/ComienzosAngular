@@ -46,7 +46,10 @@ export class GifsService {
                                         //JSON.stringify convierte un valor de JS a un valor JSON
     }
 
-    const params = new HttpParams().set('api_key', this.apiKey).set('limit' , '20').set('q', query);
+    const params = new HttpParams() //Esto recibe los parametros tanto como el query, el limit y la api_key
+                  .set('api_key', this.apiKey)
+                  .set('limit' , '20')
+                  .set('q', query);
 
     this.http.get<SearchGIFResponse>(`${this.servicioURL}/search`,{params})   //Aqui se coloca la url a la cual se va a realizar la peticion
     .subscribe( (resp) => { //.suscribe se va a ejecutar cuando tengamos la resolucion del .get
@@ -54,5 +57,4 @@ export class GifsService {
       localStorage.setItem('resultados', JSON.stringify(this.resultados) )
     });
   }
-  
 }

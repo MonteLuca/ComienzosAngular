@@ -15,7 +15,7 @@ export class SidebarComponent {
   constructor(private gifsService: GifsService) {} //Inyectamos el servicio 
 
   buscar( termino: string ) {
-    this.gifsService.buscarGifs(termino);
+    this.gifsService.buscarGifs(termino);  //Esto se encarga de buscar en el historial nuestras anteriores busquedas
   }
 
 }
