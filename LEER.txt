@@ -1,0 +1,21 @@
+Para desplegar la carpeta dist se necesita el siguiente comando 
+ng build --configuration production.
+
+Para crear un modulo se utiliza el siguiente comando
+ng generate module shared
+o de forma mas abreviada
+ng g m shared
+
+
+Para crear un componente se utiliza el siguiente comando
+ng generate component "nombre de la carpeta"/ sidebar
+o de forma mas abreviada 
+ng g c "nombre de la carpeta"/ sidebar
+
+Para crear un servicio se utiliza el siguiente comando
+ng generate service "nombre de la carpeta" / gifs
+o de forma mas abreviada
+ng g s "nombre de la carpeta" / gifs
+
+Para crear un nuevo proyecto se utiliza el siguiente comando
+ng new "nombreDelProyecto"
