@@ -1,1 +1,22 @@
-<p>por-capital works!</p>
+<div class="animate__animated animate__fadeIn animate_faster">
+    <h2>Por Capital</h2>
+    <div class="row">
+        <div class="col">
+            <app-pais-input 
+                (onEnter)="buscar( $event )"
+                placeholder="Buscar capital...">
+            </app-pais-input>
+        </div>
+    </div>
+    <hr>
+</div>
+
+<div *ngIf="bandera" class="alert alert-danger"> <!-- alert nos mostrara un mensaje diciendonos si a ocurrido algun error, alert-danger es una variante de color rojo -->
+    No se encontro nada con el termino {{termino}}
+</div>
+
+<div *ngIf="paises.length > 0" class="row"> <!-- Aqui con el ngIf decimos que si hay mas de un resultado muestre la tabla -->
+    <div class="col">
+        <app-pais-tabla [paises]="paises"></app-pais-tabla> <!-- [paises] hace referencia al @Input de pais-tabla.component.ts y "paises" al arreglo de por-pais-component.ts -->
+    </div>
+</div>

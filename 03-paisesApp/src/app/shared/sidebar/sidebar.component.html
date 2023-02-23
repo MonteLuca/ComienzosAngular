@@ -1,1 +1,26 @@
-<p>sidebar works!</p>
+<h2>Busquedas</h2>
+<hr>
+<ul class="list-group">
+    <li routerLink="" 
+        class="list-group-item"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact : true}">
+            Buscar páis
+    </li>
+
+    <!-- routerLink se encarga de traer el path que nosotros definimos anteriormente
+        routerLinkActive recibe una clase que en este caso marcara azul cada vez que toquemos el link
+        [routerLinkActiveOptions]="{exact : true}" se encarga de activar la clase solo si es exactamente igual al path que definimos antes -->
+
+    <li routerLink="region" 
+        class="list-group-item"
+        routerLinkActive="active">
+            Por región
+    </li>
+
+    <li routerLink="capital"
+        class="list-group-item"
+        routerLinkActive="active">
+            Por capital
+    </li>
+</ul>
