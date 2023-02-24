@@ -24,11 +24,11 @@ export class PorPaisComponent {
 
   buscar( termino: string ) {
 
+    this.mostrarSugeridos = false;
+
     this.bandera = false;
     
     this.termino = termino;
-
-    this.mostrarSugeridos = false;
 
     this.PaisesService.buscarPais(termino) //Para que el observable se dispare tenemos que tener un subscribe por lo menos
       .subscribe( ( paises ) => {
@@ -50,8 +50,8 @@ export class PorPaisComponent {
     this.mostrarSugeridos = true;
 
     this.PaisesService.buscarPais(termino)
-    .subscribe( paises =>
-      this.paisesSugeridos = paises.splice(0,5),
+    .subscribe( 
+      paises => this.paisesSugeridos = paises.splice(0,5),
       (err) => this.paisesSugeridos = []
     )
 

@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+    margin: 10px;
+    background-color: var(--surface-b);
+    font-family: var(--font-family); /* Hace referencia al font family de la ruta primeng/resources/themes/vela-green */
+}
+
+.text-layout {
+    color: var(--text-color);
+}
+

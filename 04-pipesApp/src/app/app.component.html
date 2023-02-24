@@ -1,0 +1,27 @@
+<div class="text-layout">
+
+    <h1>{{ nombre | lowercase }}</h1>
+    
+    <h1>{{ valor | number }}</h1>
+    
+    <h1> {{obj | json }} </h1>
+
+</div>
+
+
+<div>
+    
+    <button pButton label="Mostrar Info" 
+        (click)="mostrarInfo()"     
+        icon="pi pi-eye" 
+        iconPos="right" 
+        class="p-button-help"></button> 
+
+</div>
+
+<div>
+    <p-card [header]="nombre | titlecase" subheader="Esto es SubHeader">
+        El Bardo es un viajero de un reino más allá de las estrellas y un agente de la serendipia que lucha por conservar la armonía entre la creación y la fría indiferencia de lo que yace más allá de ella. Muchas canciones de Runaterra hablan sobre su extraordinaria naturaleza y todas ellas dicen que los artefactos de un inmenso poder mágico atraen al vagabundo cósmico. Rodeado por un alegre coro de espíritus de meeps, es imposible pensar que sus acciones sean malévolas, ya que el Bardo siempre busca servir al bien de todos... a su extraña manera
+    </p-card>
+</div>
+
