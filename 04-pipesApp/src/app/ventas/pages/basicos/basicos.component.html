@@ -1,6 +1,7 @@
 <div class="text-layout">
     <h1>Pipes Basicos</h1>
-    <p>Pipes incluidos en Angular - Usualmente en CommonModule</p>
+    <h3>Pipes para manejar textos</h3>
+    <p>Pipes incluidos en Angular - Usualmente en CommonModule | Para mas info visitar la documentacion de Angular</p>
 </div>
 
 <div class="grid">
@@ -25,7 +26,7 @@
 </div>
 
 <div class="text-layout">
-    <h1>Date | Fecha | Pipe</h1>
+    <h3>Date | Fecha | Pipe</h3>
     <p>Pipes que nos permite ver fechas en diferentes formatos</p>
 </div>
 
@@ -39,6 +40,13 @@
                 <li>fecha | date:'long'</li>
                 <li>fecha | date:'dd MM YYYY'</li>
             </ul>
+            <hr>
+            <ul>
+                <li>fecha | date: 'long' : 'GMT-6' </li>
+                <li>fecha | date: 'long' : 'GMT-4' </li>
+                <li>fecha | date: 'long' : ' ' : 'en' </li>
+                <li>fecha | date: 'long' : ' ' : 'ja' </li>
+            </ul>
         </p-card>
     </div>
     <div class="col-6">
@@ -49,6 +57,13 @@
                 <li> {{fecha | date:'short'}} </li>
                 <li> {{fecha | date:'long'}} </li>
                 <li> {{fecha | date:'dd/MM/YYYY'}} </li>
+            </ul>
+            <hr>
+            <ul>
+                <li> {{fecha | date:'long':'GMT-6'}} </li>
+                <li> {{fecha | date:'long':'GMT-4'}} </li>
+                <li> {{fecha | date:'long':'':'en'}} </li>
+                <li> {{fecha | date:'long':'':'ja'}} </li>
             </ul>
         </p-card>
     </div>
